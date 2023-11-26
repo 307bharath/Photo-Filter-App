@@ -66,7 +66,7 @@ function checkfilter(clr) {
     var newimg=image;
     canvas2=document.getElementById("canvas2");
     for(var pixel of newimg.values()){
-        var gray=(pixel.getGreen() + pixel.getRed() +pixel.getBlue() )/3;
+        var gray=(pixel.getGreen() + pixel.getRed() +pixel.getBlue() )/3.0;
         pixel.setRed(gray);
         pixel.setGreen(gray);
         pixel.setRed(gray);

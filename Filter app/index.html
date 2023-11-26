@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body background="https://wallpaperaccess.com/full/1155104.jpg" >
+    <center>
+    <h1 class="head"><u>Photo Filter Applier</u></h1>
+    <div class="ele">
+        <div><label for="file">
+    <input type="file" class="custom-file-input" accept="image/*" multiple="false" id="inputfile" onchange="uploadimg()"/>
+</label></div>
+       <div> <label for="filter" class="filter">Choose filter :</label>
+        <select name="filter"onchange="checkfilter(event)">
+            <option value="select">select</option>
+          <option value="purple">purple</option>
+            <option value="Green" >Green</option>
+            <option value="Blue">Blue</option>
+            <option value="fade">Fade</option>
+        </select></div></div>
+        <div class="canvas">
+            <canvas id="canvas1"></canvas>
+            <canvas id="canvas2"></canvas>
+        </div>
+    </center>
+
+    <script src="main.js"></script>
+</body>
+</html>

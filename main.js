@@ -22,6 +22,9 @@ function checkfilter(clr) {
     else if(clr.target.value === "fade"){
         xfilt();
     }
+    else if(clr.target.value === "Gray"){
+        grayfilt();
+    }
   }
 
  function purplefilt(){
@@ -56,6 +59,17 @@ function checkfilter(clr) {
     canvas2=document.getElementById("canvas2");
     for(var pixel of newimg.values()){
         pixel.setAlpha(100);
+    }
+    newimg.drawTo(canvas2);
+ }
+ function grayfilt(){
+    var newimg=image;
+    canvas2=document.getElementById("canvas2");
+    for(var pixel of newimg.values()){
+        var gray=(pixel.getGreen() + pixel.getRed() +pixel.getBlue() )/3;
+        pixel.setRed(gray);
+        pixel.setGreen(gray);
+        pixel.setRed(gray);
     }
     newimg.drawTo(canvas2);
  }
